@@ -1,0 +1,16 @@
+CREATE TABLE `student_reduction_result` (
+  `reduction_id` int(11) NOT NULL AUTO_INCREMENT,
+  `mark_id` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `student_code` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `score_item_id` int(11) NOT NULL DEFAULT '0',
+  `reduction_item_id` tinyint(4) NOT NULL DEFAULT '0',
+  `times` tinyint(4) NOT NULL DEFAULT '1',
+  `reduct_point` smallint(6) NOT NULL DEFAULT '0',
+  `info` text COLLATE utf8_unicode_ci,
+  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`reduction_id`),
+  KEY `mark_id` (`mark_id`),
+  KEY `code` (`student_code`),
+  KEY `score_item_id` (`score_item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1623 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci

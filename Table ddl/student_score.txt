@@ -1,0 +1,19 @@
+CREATE TABLE `student_score` (
+  `score_id` int(11) NOT NULL AUTO_INCREMENT,
+  `mark_id` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `student_code` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `score_item_id` int(11) NOT NULL DEFAULT '0',
+  `basic_score` decimal(5,2) NOT NULL DEFAULT '0.00',
+  `add_score` decimal(5,2) NOT NULL DEFAULT '0.00',
+  `reduction_score` smallint(6) NOT NULL DEFAULT '0',
+  `final_score` decimal(5,2) NOT NULL DEFAULT '0.00',
+  `screen_path` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `page_path` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `google_pagespeed_path` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`score_id`),
+  KEY `mark_id` (`mark_id`),
+  KEY `code` (`student_code`),
+  KEY `score_item_id` (`score_item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
